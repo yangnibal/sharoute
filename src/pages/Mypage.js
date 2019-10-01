@@ -7,7 +7,6 @@ import Myposts from '../components/Myposts';
 @observer
 class Mypage extends Component {
     render() {
-        const { match } = this.props;
         return (
             <div className="mypage-wrapper">
                 <div className="mypage-myroute">

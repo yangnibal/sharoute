@@ -6,6 +6,7 @@ import Mypage from './pages/Mypage';
 import Notice_board from './pages/Notice_board';
 import Header from './pages/Header';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 import './App.css';
 
 @inject('store')
@@ -21,6 +22,7 @@ class App extends Component {
 						<Route path="/mypage/:key" component={Mypage}/>
 						<Route path="/notice_board" component={Notice_board}/>
 						<Route path="/login" component={Login}/>
+						<Route path="/signup" component={Signup}/>
 					</Switch>
 				</div>
 			)
@@ -32,6 +34,8 @@ class App extends Component {
 					<Route exact path="/" component={Home}/>
 					<Route path="/mypage/:key" component={Mypage}/>
 					<Route path="/notice_board" component={Notice_board}/>
+					<Route path="/login" component={Login}/>
+					<Route path="/signup" component={Signup}/>
 				</Switch>
 			</div>
 		)

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../css/Login.css';
 
 @inject('store')
@@ -30,13 +30,13 @@ class Login extends Component {
                         />
                     </div>
                     <div className="button-wrapper">
-                        <Link 
-                            to={store.isLogin===true ? "/" : "/login"}
+                        <NavLink 
                             className="login-button" 
                             onClick={() => store.handleLogin(store.input_email)}
+                            to={store.loginlink}
                         >
                                 로그인
-                        </Link>
+                        </NavLink>
                     </div>
                 </div>
             </div>

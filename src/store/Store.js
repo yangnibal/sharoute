@@ -23,6 +23,7 @@ export default class Store {
     @observable search  = "";
     @observable possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     @observable key = "";
+    @observable loginlink = "";
 
     @action handleChange = (e) => {
         const { name, value } = e.target; 
@@ -51,11 +52,12 @@ export default class Store {
         })
         if(this.input_password===this.finduserlist.password) {
             this.isLogin = true;
-            alert('로그인에 성공하였습니다')
+            this.loginlink = "/";
         }
         else {
             alert('이메일이나 비밀번호가 다릅니다')
+            this.loginlink = "/login";
         }
-        console.warn('check')
+        console.warn(this.isLogin)
     }
 }
